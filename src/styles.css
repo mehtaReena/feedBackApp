@@ -1,0 +1,403 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    font-family:"Poppins" Arial, Helvetica, sans-serif;
+}
+h3{
+  color:#586BA9; ;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    gap:3rem;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    padding: 40px;
+
+}
+.left{
+    display: flex;
+    flex: 4;
+    border: 1px  solid black;
+    overflow-y: scroll;
+    height: 100%;
+}
+.right{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap:1rem;
+    height: 100%;
+}
+
+.companyForm{
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    height: fit-content;
+    color:black;
+    background-color: white;
+    border-radius: 9px;
+    padding: 28px;
+    border: 2px solid #DFDFDF;
+
+  }
+
+  input[type=text] {
+    width: 90%;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  border-radius: 7px;
+  border: 2px solid #DFDFDF;
+  margin-bottom: 10px;
+  }
+  input[type=number] {
+    width: 90%;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  border-radius: 7px;
+  border: 2px solid #DFDFDF;
+  margin-bottom: 10px;
+  }
+  input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  textarea {
+
+    border-radius: 7px;
+    padding: 10px 15px;
+    height: fit-content;
+    width: 90%;
+    border: 2px solid #DFDFDF;
+    }
+
+  .cardInfo{
+      display: flex;
+      flex-direction: column;
+      gap:1rem;
+      padding: 10px;
+      border: 2px solid #DFDFDF;
+  }
+  .card{
+    display: flex;
+    flex-direction: column;
+     width: 750px;
+
+  }
+  select{
+
+    width:40%;
+    padding: 5px;
+    background-image: linear-gradient(to bottom right,#DFDFDF,#dfdfdfe0 );
+    margin-top: 10px;
+    border-radius: 7px;
+    margin-bottom: 10px;
+
+  }
+  .button{
+    padding: 5px;
+    border-radius: 7px;
+    width: 6em;
+
+
+  }
+  .company-name{
+    color: #586BA9;
+    font-size: 1em;
+    background-color: #DFDFDF;
+     width: 100%;
+     text-transform: uppercase;
+     border-top-left-radius: 4px;
+     border-top-right-radius: 4px;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     justify-items: center;
+     padding:10px;
+     font-weight: bold;
+     font-family:"Poppins"
+
+
+  }
+  .overviewBtn{
+    display: flex;
+    color: #586BA9;
+    cursor: pointer;
+    font-size: 1em;
+    border: none;
+    background: transparent;
+    font-weight: bold;
+
+  }
+
+.details{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap:1rem;
+  padding: 40px;
+}
+
+.bottom-border{
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: #DFDFDF;
+  width: 100%;
+  padding: 10px;
+}
+a{
+  text-decoration: none;
+}
+
+.details-container{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+   gap:2rem;
+  width: 100vw;
+  padding: 40px;
+}
+.company-info{
+  display: flex;
+  flex-direction: row;
+  gap:3rem;
+
+  width: 100%;
+
+  padding: 20px;
+
+}
+.details-overview{
+display: flex;
+flex-direction: column;
+width: 50vw;
+border: 2px solid;
+box-shadow: 0px 10px #888888;
+margin: auto;
+border-radius: 7px;
+
+}
+.employee-container{
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  margin: auto;
+  border: 2px solid #888888;
+  border-radius: 7px;
+}
+.employee-card{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid;
+box-shadow: 0px 10px #888888;
+border-radius: 7px;
+
+}
+.info{
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+
+}
+
+select:focus {
+  border-color: blue;
+}
+select.option{
+  color: #586BA9;
+}
+
+.pop-up {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -220px;
+  background-color: rgba(0, 0, 0, 0.322);
+  background-size:cover;
+
+}
+
+.pop-up .dialog-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 40%;
+  height: 40%;
+  background-color: white;
+  border-radius: 12px;
+
+}
+.dialog-box .dialog-box-header {
+  width: 100%;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background-color: black;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.dialog-box .dialog-box-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 20px;
+  gap: 10px;
+  width: 100%;
+  flex: 1;
+}
+
+
+.dialog-box .input-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+}
+
+.dialog-box .transaction-type {
+  background-color: crimson;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  padding: 5px 10px;
+  margin-left: 20px;
+}
+.row{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  gap:1rem;
+}
+
+.actions{
+  display: flex;
+  flex-direction: row;
+  gap:1rem;
+}
+
+.signin{
+  margin-top: 80px;
+  display: flex;
+  height: 400px;
+  width: 500px;
+color:white;
+flex-direction: column;
+border-radius: 9px;
+border: 2px solid black;
+padding: 30px;
+gap:1rem;
+margin: auto;
+}
+
+.signInBtn{
+  width: 10rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  font-size: 1em;
+  cursor: pointer;
+
+}
+
+.sign-upbtn {
+  width: 15rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  font-size: 0.5em;
+  cursor: pointer;
+}
+
+input[type=text] {
+  width: 55%;
+padding: 10px 15px;
+box-sizing: border-box;
+border-radius: 7px;
+}
+
+input[type=email] {
+  width: 80%;
+padding: 10px 15px;
+
+box-sizing: border-box;
+border-radius: 7px;
+}
+input[type=number] {
+  width: 55%;
+padding: 10px 15px;
+box-sizing: border-box;
+border-radius: 7px;
+}
+textarea {
+   width: 50%;
+  border-radius: 7px;
+  padding:6px;
+  }
+
+
+input[type=password] {
+  width: 80%;
+padding: 10px 15px;
+box-sizing: border-box;
+border-radius: 7px;
+}
+
+.sign-up {
+  height: 70vh;
+  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  padding: 40px;
+  width:35vw;
+  gap: 1rem;
+  gap:1rem;
+  border-radius: 7px;
+}
+.send-message{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.details{
+  display: flex;
+  flex-direction: column;
+
+}
+
+
+.cardInfo{
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+  padding: 10px;
+  border: 2px solid #DFDFDF;
+  border-radius: 7px;
+  width:40%
+}
+.card{
+display: flex;
+flex-direction: column;
+ width: 750px;
+
+}
