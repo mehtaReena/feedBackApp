@@ -19,12 +19,13 @@ export function userReducer(state=initialState, action) {
              console.log(" Login success..." ,action.payload )
             return {...state, signinError: null, validate: true, loading :false,currentUser: action.payload};
         case LOGIN_ERROR:
+            console.log(" Login success..." ,action.payload )
             return {...state, signinError: action.error};
         case SET_CURRENT_USER:
             return {...state, currentUser: action.payload ,validate: true};
         case LOGOUT_SUCCESS:
             console.log("LOGOUT_SUCCESS")
-            return { state:null,signoutError: null, validate: false ,currentUser:null};
+            return { state:null,signoutError: null, validate: false ,currentUser:null ,confirm:false};
         case LOGOUT_ERROR:
             return {...state, signoutError: action.error};
         case SIGNUP_SUCCESS:

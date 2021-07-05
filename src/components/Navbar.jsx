@@ -21,7 +21,7 @@ function Nav() {
     const userState = useSelector((state) => state.userState);
 
     return (
-        <div className="nav">
+        <div className="navbar">
             <div>
 
                  <div className="navUser">

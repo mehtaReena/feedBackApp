@@ -2,9 +2,9 @@
 import { useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
-import { signIn } from "../redux/actions/userAction";
+import { signIn,signOut } from "../redux/actions/userAction";
 import "../styles.css"
 
 
@@ -14,8 +14,8 @@ function SignIn() {
     const history = useHistory();
     const dispatch = useDispatch();
     const userState = useSelector((state) => state.userState);
-    const { signInError } = userState;
-    console.log("   validated : ", userState);
+
+    // console.log("   validated : ", userState);
 
 
     const clickhandler = () => {
@@ -30,12 +30,21 @@ function SignIn() {
 
     }
 
+    const signup =()=>{
+        dispatch(signOut());
+
+        history.push('/signup')
+
+    }
+
+
+
 
 
 
 
     return (
-        <>
+        <div className="container">
 
             <div className="signin">
                 <h3> Login </h3>
@@ -53,10 +62,10 @@ function SignIn() {
                 />
 
                 <button className="signInBtn" onClick={clickhandler}> 🙎‍♂️ SignIn</button>
-                {signInError ? <p>{signInError}</p> : null}
-                <Link to="/signup">  🙎‍♂️Create an account</Link>
+                <span className="error">{userState.signinError ? <p>{userState.signinError}</p> : null}</span>
+                <button className="signupLink" onClick={signup}> 🙎‍♂️Create an account</button>
             </div>
-        </>
+        </div>
     );
 }
 

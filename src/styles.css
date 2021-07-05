@@ -16,67 +16,25 @@ h3{
 .container{
     display: flex;
     flex-direction: column;
-    gap:3rem;
+    border: 1px solid black;
+    justify-items: center;
+    align-items: center;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
     padding: 40px;
+    justify-content: center;
 
 }
-.left{
-    display: flex;
-    flex: 4;
-    border: 1px  solid black;
-    overflow-y: scroll;
-    height: 100%;
-}
-.right{
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    gap:1rem;
-    height: 100%;
-}
 
-.companyForm{
-    display: flex;
-    flex-direction: column;
-    width: 30vw;
-    height: fit-content;
-    color:black;
-    background-color: white;
-    border-radius: 9px;
-    padding: 28px;
-    border: 2px solid #DFDFDF;
 
-  }
-
-  input[type=text] {
-    width: 90%;
-  padding: 10px 15px;
-  box-sizing: border-box;
-  border-radius: 7px;
-  border: 2px solid #DFDFDF;
-  margin-bottom: 10px;
-  }
-  input[type=number] {
-    width: 90%;
-  padding: 10px 15px;
-  box-sizing: border-box;
-  border-radius: 7px;
-  border: 2px solid #DFDFDF;
-  margin-bottom: 10px;
-  }
-  input[type=number]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-  }
 
   textarea {
 
     border-radius: 7px;
     padding: 10px 15px;
     height: fit-content;
-    width: 90%;
+    width: 12rem;
     border: 2px solid #DFDFDF;
     }
 
@@ -91,212 +49,7 @@ h3{
     display: flex;
     flex-direction: column;
      width: 750px;
-
   }
-  select{
-
-    width:40%;
-    padding: 5px;
-    background-image: linear-gradient(to bottom right,#DFDFDF,#dfdfdfe0 );
-    margin-top: 10px;
-    border-radius: 7px;
-    margin-bottom: 10px;
-
-  }
-  .button{
-    padding: 5px;
-    border-radius: 7px;
-    width: 6em;
-
-
-  }
-  .company-name{
-    color: #586BA9;
-    font-size: 1em;
-    background-color: #DFDFDF;
-     width: 100%;
-     text-transform: uppercase;
-     border-top-left-radius: 4px;
-     border-top-right-radius: 4px;
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
-     justify-items: center;
-     padding:10px;
-     font-weight: bold;
-     font-family:"Poppins"
-
-
-  }
-  .overviewBtn{
-    display: flex;
-    color: #586BA9;
-    cursor: pointer;
-    font-size: 1em;
-    border: none;
-    background: transparent;
-    font-weight: bold;
-
-  }
-
-.details{
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  gap:1rem;
-  padding: 40px;
-}
-
-.bottom-border{
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  background-color: #DFDFDF;
-  width: 100%;
-  padding: 10px;
-}
-a{
-  text-decoration: none;
-}
-
-.details-container{
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  justify-content: center;
-   gap:2rem;
-  width: 100vw;
-  padding: 40px;
-}
-.company-info{
-  display: flex;
-  flex-direction: row;
-  gap:3rem;
-
-  width: 100%;
-
-  padding: 20px;
-
-}
-.details-overview{
-display: flex;
-flex-direction: column;
-width: 50vw;
-border: 2px solid;
-box-shadow: 0px 10px #888888;
-margin: auto;
-border-radius: 7px;
-
-}
-.employee-container{
-  display: flex;
-  flex-direction: column;
-  width: 50vw;
-  margin: auto;
-  border: 2px solid #888888;
-  border-radius: 7px;
-}
-.employee-card{
-  display: flex;
-  flex-direction: column;
-  border: 1px solid;
-box-shadow: 0px 10px #888888;
-border-radius: 7px;
-
-}
-.info{
-  display: flex;
-  flex-direction: column;
-  padding: 6px;
-
-}
-
-select:focus {
-  border-color: blue;
-}
-select.option{
-  color: #586BA9;
-}
-
-.pop-up {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  top: -220px;
-  background-color: rgba(0, 0, 0, 0.322);
-  background-size:cover;
-
-}
-
-.pop-up .dialog-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 40%;
-  height: 40%;
-  background-color: white;
-  border-radius: 12px;
-
-}
-.dialog-box .dialog-box-header {
-  width: 100%;
-  padding: 5px 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-  background-color: black;
-  border-top-left-radius: 12px;
-  border-top-right-radius: 12px;
-}
-
-.dialog-box .dialog-box-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding-left: 20px;
-  gap: 10px;
-  width: 100%;
-  flex: 1;
-}
-
-
-.dialog-box .input-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-
-}
-
-.dialog-box .transaction-type {
-  background-color: crimson;
-  color: white;
-  font-family: 'Poppins', sans-serif;
-  margin-bottom: 10px;
-  border-radius: 8px;
-  padding: 5px 10px;
-  margin-left: 20px;
-}
-.row{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
-  gap:1rem;
-}
-
-.actions{
-  display: flex;
-  flex-direction: row;
-  gap:1rem;
-}
-
 .signin{
   margin-top: 80px;
   display: flex;
@@ -321,7 +74,7 @@ margin: auto;
 }
 
 .sign-upbtn {
-  width: 15rem;
+  width: 10rem;
   height: 2rem;
   border-radius: 0.5rem;
   font-size: 0.5em;
@@ -350,6 +103,7 @@ border-radius: 7px;
 }
 textarea {
    width: 50%;
+   height: 10rem;
   border-radius: 7px;
   padding:6px;
   }
@@ -363,7 +117,7 @@ border-radius: 7px;
 }
 
 .sign-up {
-  height: 70vh;
+  height: auto;
   font-size: 2em;
   display: flex;
   flex-direction: column;
@@ -373,11 +127,24 @@ border-radius: 7px;
   gap: 1rem;
   gap:1rem;
   border-radius: 7px;
+  border: 1px solid black;
 }
 .send-message{
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  width: 100%;
+  align-items: center;
+  padding: 20px;
+}
+.button{
+  display: flex;
+  width:7rem;
+  padding: .5rem;
+  border-radius: 7px;
+  justify-content: center;
+  cursor: pointer;
+
 }
 .details{
   display: flex;
@@ -388,16 +155,115 @@ border-radius: 7px;
 
 .cardInfo{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap:1rem;
   padding: 10px;
   border: 2px solid #DFDFDF;
   border-radius: 7px;
-  width:40%
+  width:80%;
+  justify-content:  space-between;
+  height: auto;
+
+
 }
 .card{
 display: flex;
-flex-direction: column;
- width: 750px;
+flex-direction: row;
+ width: 100%;
+
+}
+
+.error{
+  color: red;
+  font-size: .8em;;
+}
+
+.feedback-wrapper{
+  display: flex;
+  position: relative;
+  width: 60%;
+  height: auto;
+  padding: 50px;
+
+}
+.info{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  gap:1rem;
+}
+.feedbacks{
+  display:flex;
+  flex-direction: column;
+  gap:2rem;
+  width: 100%;
+  height: auto;
+  border: 1px solid black;
+  padding: 40px;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+  align-items: center;
+
+}
+
+.tip {
+  /* transform: rotate(-45deg); */
+  background: white;
+  width: 100px;
+  height: 40px;
+  position: absolute;
+  top: 1.2rem;
+  left: 3.1rem;
+  color: black;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: center;
+
+}
+
+.navbar{
+  display: flex;
+  width: 100%;
+
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-right: 130px;
+}
+.navUser{
+  display: flex;
+  flex-direction: row;
+  gap:2rem
+
+}
+.profile-pic{
+  display: flex;
+  object-fit: cover;
+  width: 80px;
+  height: 80px;
+
+}
+img{
+  width: 100%;
+  height: 100%;
+}
+.remove{
+  background-color: transparent;
+  border: none;
+}
+.signupLink{
+  background-color: transparent;
+  width: fit-content;
+  justify-self: flex-start;
+  border: none;
 
 }

@@ -38,15 +38,21 @@ export const deleteFeedbackerror = (error) => ({
 
 
 export const fetchFeedBack = (instance) => {
-    console.log(" fetchFeedBack"  ,instance)
+    console.log(" fetchFeedBack"  , db.ref("users/"+instance+"/feedbacks/feedback"))
     return async function (dispatch) {
         try {
             dispatch(fetchFeedbackInprogress());
 
-            db.ref(instance).on("value", (snapshot) => {
-                if (snapshot) {
-                    console.log("snapshot  :", Object.values(snapshot.val()))
-                dispatch(fetchFeedbackSuccess( Object.values(snapshot.val())));
+            db.ref("users/"+instance +"/feedbacks").on("value", (snapshot) => {
+                console.log(snapshot)
+                if (snapshot.val()) {
+                    console.log("snapshot  :",(snapshot.val()))
+                dispatch(fetchFeedbackSuccess( Object.entries(snapshot.val())));
+
+                }
+                else{
+                    dispatch(fetchFeedbackSuccess([]));
+
 
                 }
             });
@@ -63,7 +69,7 @@ export const addFeedback = (user,value) => {
     return async function(dispatch) {
         console.log("addfeedback  ",value)
         try {
-            db.ref(user+"/").push({message:value});
+            db.ref("users/"+user+"/feedbacks").push({"feedback":value});
 
         } catch (error) {
             console.error(error);
@@ -71,5 +77,22 @@ export const addFeedback = (user,value) => {
 
     }
 }
+
+
+export const removefromDB = (user ,id) => {
+    return async function(dispatch) {
+        console.log("Remove FeedBack  ",id)
+        try {
+            db.ref("users/"+user+"/feedbacks/"+id).remove()
+
+
+
+        } catch (error) {
+            console.error(error);
+        }
+
+    }
+}
+
 
 

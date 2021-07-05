@@ -13,7 +13,7 @@ function SignUp() {
     const repassword = useRef();
     const history = useHistory();
     const dispatch = useDispatch();
-    const {signupError, confirm ,currentUser} = useSelector(state => state.userState);
+    const {signupError, confirm} = useSelector(state => state.userState);
 
     const clickhandler = () => {
         if(password.current.value !== repassword.current.value) {
@@ -24,9 +24,10 @@ function SignUp() {
         dispatch(signUp(email.current.value, password.current.value ,userId.current.value));
     }
 
-    if(confirm) history.push("/");
+    if(confirm) history.push("/signin");
 
     return (
+        <div className="container">
         <div className="sign-up">
             <h4>Create new account.</h4>
             <input type="text" ref={userId} placeholder="display-name" />
@@ -34,7 +35,8 @@ function SignUp() {
             <input type="password" ref={password} placeholder="password" />
             <input type="password" ref={repassword} placeholder="re-enter password" />
             <button className ="sign-upbtn"onClick={clickhandler}>Submit</button>
-            {signupError ? <p>{signupError}</p> : null}
+           <span className="error"> {signupError ? <p>{signupError}</p> : null}</span>
+        </div>
         </div>
     )
 }
